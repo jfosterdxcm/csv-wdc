@@ -1,12 +1,12 @@
 $(document).ready(function (datasource) {
 
 	var indicator = $('#CSV').val();
-	var datasource = "http://localhost:8889/" + indicator;
+	var datasource = "http://" + indicator;
 	var myConnector = tableau.makeConnector();
 	
 	$('#CSV').on('change keyup paste click', function() {
     indicator = $('#CSV').val();
-	datasource = "http://localhost:8889/" + indicator;
+	datasource = "http://" + indicator;
 	tableau.connectionData = datasource;
 	});
 	
